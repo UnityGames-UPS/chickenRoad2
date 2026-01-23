@@ -1,0 +1,754 @@
+fileFormatVersion: 2
+guid: 7ec3c26a8a2d1488c8616845a4f46574
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3208211778056176824
+    second: Avtar_0
+  - first:
+      213: -7862442422779022810
+    second: Avtar_1
+  - first:
+      213: 9020821420418760916
+    second: Avtar_2
+  - first:
+      213: -4364974665547254249
+    second: Avtar_3
+  - first:
+      213: -5788446793572431882
+    second: Avtar_4
+  - first:
+      213: -5676860190582832652
+    second: Avtar_5
+  - first:
+      213: 2325333328314274630
+    second: Avtar_6
+  - first:
+      213: 8524977727414063191
+    second: Avtar_7
+  - first:
+      213: 7666305174204999914
+    second: Avtar_8
+  - first:
+      213: 9107741726338406113
+    second: Avtar_9
+  - first:
+      213: 8848454008044043837
+    second: Avtar_10
+  - first:
+      213: 1831226582075441556
+    second: Avtar_11
+  - first:
+      213: -6607293087319071412
+    second: Avtar_12
+  - first:
+      213: 4232185583288917176
+    second: Avtar_13
+  - first:
+      213: -8581747214793776026
+    second: Avtar_14
+  - first:
+      213: 2887711191899050890
+    second: Avtar_15
+  - first:
+      213: 8945033087556597980
+    second: Avtar_16
+  - first:
+      213: -3388504245908331052
+    second: Avtar_17
+  - first:
+      213: -6865765522213814377
+    second: Avtar_18
+  - first:
+      213: 2855248696334439216
+    second: Avtar_19
+  - first:
+      213: -5616555389513769648
+    second: Avtar_20
+  - first:
+      213: -3568801380932606508
+    second: Avtar_21
+  - first:
+      213: 6180934376002640160
+    second: Avtar_22
+  - first:
+      213: 2073522546142142470
+    second: Avtar_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Avtar_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 1310
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84bbcbcb2642a73d0800000000000000
+      internalID: -3208211778056176824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1310
+        width: 348
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6227b43064ef2e290800000000000000
+      internalID: -7862442422779022810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_2
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 1310
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d08b4a9945603d70800000000000000
+      internalID: 9020821420418760916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_3
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1310
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716f9761bae7c63c0800000000000000
+      internalID: -4364974665547254249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_4
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 1310
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7cddb4f4e4bafa0800000000000000
+      internalID: -5788446793572431882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_5
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 1310
+        width: 348
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f101c4ebbdb731b0800000000000000
+      internalID: -5676860190582832652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 914
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6439c8a875e354020800000000000000
+      internalID: 2325333328314274630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 914
+        width: 348
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750d1a8631ece4670800000000000000
+      internalID: 8524977727414063191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_8
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 914
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae86a3820ff246a60800000000000000
+      internalID: 7666305174204999914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_9
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 914
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6576068d2356e70800000000000000
+      internalID: 9107741726338406113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_10
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 914
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3eb8d80a060cca70800000000000000
+      internalID: 8848454008044043837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_11
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 914
+        width: 348
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4910cd7cfd2d96910800000000000000
+      internalID: 1831226582075441556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_12
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 522
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45e37ba1fd2e44a0800000000000000
+      internalID: -6607293087319071412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_13
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 522
+        width: 348
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc177b6d5ebbba30800000000000000
+      internalID: 4232185583288917176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_14
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 522
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 664e40e406287e880800000000000000
+      internalID: -8581747214793776026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_15
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 522
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a83101f7706331820800000000000000
+      internalID: 2887711191899050890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_16
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 522
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd83de74334232c70800000000000000
+      internalID: 8945033087556597980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_17
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 522
+        width: 348
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d52bb6675d99f0d0800000000000000
+      internalID: -3388504245908331052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_18
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 125
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f325942a6e7b0a0800000000000000
+      internalID: -6865765522213814377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_19
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 125
+        width: 348
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0335962cf81ef9720800000000000000
+      internalID: 2855248696334439216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_20
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 125
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05dd9ba81acfd02b0800000000000000
+      internalID: -5616555389513769648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_21
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 125
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d5a6976d02197ec0800000000000000
+      internalID: -3568801380932606508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_22
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 125
+        width: 347
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02953a5211717c550800000000000000
+      internalID: 6180934376002640160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Avtar_23
+      rect:
+        serializedVersion: 2
+        x: 2051
+        y: 125
+        width: 348
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 600e09c05c1a6cc10800000000000000
+      internalID: 2073522546142142470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Avtar_0: -3208211778056176824
+      Avtar_1: -7862442422779022810
+      Avtar_10: 8848454008044043837
+      Avtar_11: 1831226582075441556
+      Avtar_12: -6607293087319071412
+      Avtar_13: 4232185583288917176
+      Avtar_14: -8581747214793776026
+      Avtar_15: 2887711191899050890
+      Avtar_16: 8945033087556597980
+      Avtar_17: -3388504245908331052
+      Avtar_18: -6865765522213814377
+      Avtar_19: 2855248696334439216
+      Avtar_2: 9020821420418760916
+      Avtar_20: -5616555389513769648
+      Avtar_21: -3568801380932606508
+      Avtar_22: 6180934376002640160
+      Avtar_23: 2073522546142142470
+      Avtar_3: -4364974665547254249
+      Avtar_4: -5788446793572431882
+      Avtar_5: -5676860190582832652
+      Avtar_6: 2325333328314274630
+      Avtar_7: 8524977727414063191
+      Avtar_8: 7666305174204999914
+      Avtar_9: 9107741726338406113
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!74 &7400000
+AnimationClip:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: win
+  serializedVersion: 7
+  m_Legacy: 0
+  m_Compressed: 0
+  m_UseHighQualityCurve: 1
+  m_RotationCurves: []
+  m_CompressedRotationCurves: []
+  m_EulerCurves: []
+  m_PositionCurves: []
+  m_ScaleCurves: []
+  m_FloatCurves: []
+  m_PPtrCurves:
+  - serializedVersion: 2
+    curve:
+    - time: 0
+      value: {fileID: 8754025721991906279, guid: d2430011345a74b529499c2ac1fab815, type: 3}
+    - time: 0.06666667
+      value: {fileID: 3536060845882261554, guid: cb8b2334fc9244f5683821b1630dc731, type: 3}
+    - time: 0.11666667
+      value: {fileID: 9184277867859050570, guid: 8ffb380b39f3b4d87a5e020fa71dde33, type: 3}
+    - time: 0.18333334
+      value: {fileID: 1886081308492094419, guid: 7696e31c735ee4552ae249c60c731f6c, type: 3}
+    - time: 0.23333333
+      value: {fileID: -6480193683790362555, guid: 0a291f971649844219c502a0adab708a, type: 3}
+    - time: 0.3
+      value: {fileID: -605323647961447171, guid: 7b4a2e2dc95244a4faf49beec7267afa, type: 3}
+    - time: 0.36666667
+      value: {fileID: -7402031864749244204, guid: d540b9af511b6494c9ac7f5a6a08391e, type: 3}
+    - time: 0.41666666
+      value: {fileID: -3853784433028677436, guid: 273e86f1653f74d2c917c5a251ecd8e2, type: 3}
+    - time: 0.48333332
+      value: {fileID: -1097403458362186020, guid: 3d52807f17d4848f59a2b1f1aebb24a3, type: 3}
+    - time: 0.53333336
+      value: {fileID: -560384910850661314, guid: 68d78d61d86904eb7ab6b3367e84c9da, type: 3}
+    - time: 0.6
+      value: {fileID: 5205486300338886720, guid: ae1f93ff2d5924ba5b5e126ea657da6c, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 114
+    script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+    flags: 2
+  m_SampleRate: 60
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 2015549526
+      script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 8754025721991906279, guid: d2430011345a74b529499c2ac1fab815, type: 3}
+    - {fileID: 3536060845882261554, guid: cb8b2334fc9244f5683821b1630dc731, type: 3}
+    - {fileID: 9184277867859050570, guid: 8ffb380b39f3b4d87a5e020fa71dde33, type: 3}
+    - {fileID: 1886081308492094419, guid: 7696e31c735ee4552ae249c60c731f6c, type: 3}
+    - {fileID: -6480193683790362555, guid: 0a291f971649844219c502a0adab708a, type: 3}
+    - {fileID: -605323647961447171, guid: 7b4a2e2dc95244a4faf49beec7267afa, type: 3}
+    - {fileID: -7402031864749244204, guid: d540b9af511b6494c9ac7f5a6a08391e, type: 3}
+    - {fileID: -3853784433028677436, guid: 273e86f1653f74d2c917c5a251ecd8e2, type: 3}
+    - {fileID: -1097403458362186020, guid: 3d52807f17d4848f59a2b1f1aebb24a3, type: 3}
+    - {fileID: -560384910850661314, guid: 68d78d61d86904eb7ab6b3367e84c9da, type: 3}
+    - {fileID: 5205486300338886720, guid: ae1f93ff2d5924ba5b5e126ea657da6c, type: 3}
+  m_AnimationClipSettings:
+    serializedVersion: 2
+    m_AdditiveReferencePoseClip: {fileID: 0}
+    m_AdditiveReferencePoseTime: 0
+    m_StartTime: 0
+    m_StopTime: 0.6166667
+    m_OrientationOffsetY: 0
+    m_Level: 0
+    m_CycleOffset: 0
+    m_HasAdditiveReferencePose: 0
+    m_LoopTime: 1
+    m_LoopBlend: 0
+    m_LoopBlendOrientation: 0
+    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionXZ: 0
+    m_KeepOriginalOrientation: 0
+    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionXZ: 0
+    m_HeightFromFeet: 0
+    m_Mirror: 0
+  m_EditorCurves: []
+  m_EulerEditorCurves: []
+  m_HasGenericRootTransform: 0
+  m_HasMotionFloatCurves: 0
+  m_Events:
+  - time: 0.3
+    functionName: ribbonAnimation
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6
+    functionName: JumpAnimationComplete
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
