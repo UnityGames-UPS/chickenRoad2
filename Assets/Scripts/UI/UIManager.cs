@@ -3,6 +3,8 @@ using DG.Tweening;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System;
+
 
 public class UIManager : MonoBehaviour
 {
@@ -60,10 +62,7 @@ public class UIManager : MonoBehaviour
   private RectTransform Settings_RT;
   [SerializeField]
   private Button ChangeAvatarbtn;
-  [SerializeField]
-  private Button ProbfablyBtn;
-  private Button rulesBtn;
-  private Button HistoryBtn;
+
 
 
   [SerializeField]
@@ -178,6 +177,15 @@ public class UIManager : MonoBehaviour
   private AudioController audioController;
   [SerializeField]
   private Button m_AwakeGameButton;
+  [Header("History Popup")]
+  [SerializeField] private GameObject HistoryPopup;
+  [SerializeField]
+  private Button CloseHistoryButton;
+
+  [SerializeField] private GameObject HistoryPrefab;
+  [SerializeField] private Transform HistorySpawnPanel;
+  private Button LoadMoreButton;
+
 
   [SerializeField]
   private Button GameExit_Button;
@@ -187,7 +195,6 @@ public class UIManager : MonoBehaviour
 
   [SerializeField]
   private SocketIOManager socketManager;
-
   private bool isMusic = true;
   private bool isSound = true;
   private Tween WinPopupTextTween;
@@ -217,7 +224,9 @@ public class UIManager : MonoBehaviour
     if (GameRulebtn) GameRulebtn.onClick.AddListener(delegate { OpenPopup(GameRulesPanel); });
 
     if (historyBtn) historyBtn.onClick.RemoveAllListeners();
-    if (historyBtn) historyBtn.onClick.AddListener(delegate { OpenPopup(HistoryPanel); });
+    if (historyBtn) historyBtn.onClick.AddListener(delegate { OpenPopup(HistoryPopup); socketManager.AccumulateHistory(); });
+    if (LoadMoreButton) historyBtn.onClick.RemoveAllListeners();
+    if (LoadMoreButton) LoadMoreButton.onClick.AddListener(delegate { socketManager.AccumulateHistory(); });
 
     if (ChangeAvatarbtn) ChangeAvatarbtn.onClick.RemoveAllListeners();
     if (ChangeAvatarbtn) ChangeAvatarbtn.onClick.AddListener(delegate { OpenPopup(avatarPanel); setAvatarList(); });
@@ -332,6 +341,15 @@ public class UIManager : MonoBehaviour
     if (AVSaveButton) AVSaveButton.onClick.RemoveAllListeners();
     if (AVSaveButton) AVSaveButton.onClick.AddListener(() => { ClosePopup(); PlayerPrefs.SetInt("Avatar", selectedAvatar); });
 
+    if (BetOpt1Btn) BetOpt1Btn.onClick.RemoveAllListeners();
+    if (BetOpt1Btn) BetOpt1Btn.onClick.AddListener(() => { currentBetText.text = BetOpt1Btn.GetComponentInChildren<TMP_Text>().text; slotManager.currentBet = 0; });
+    if (BetOpt2Btn) BetOpt2Btn.onClick.RemoveAllListeners();
+    if (BetOpt2Btn) BetOpt2Btn.onClick.AddListener(() => { currentBetText.text = BetOpt2Btn.GetComponentInChildren<TMP_Text>().text; slotManager.currentBet = 1; });
+    if (BetOpt3Btn) BetOpt3Btn.onClick.RemoveAllListeners();
+    if (BetOpt3Btn) BetOpt3Btn.onClick.AddListener(() => { currentBetText.text = BetOpt3Btn.GetComponentInChildren<TMP_Text>().text; slotManager.currentBet = 2; });
+    if (BetOpt4Btn) BetOpt4Btn.onClick.RemoveAllListeners();
+    if (BetOpt4Btn) BetOpt4Btn.onClick.AddListener(() => { currentBetText.text = BetOpt4Btn.GetComponentInChildren<TMP_Text>().text; slotManager.currentBet = 3; });
+
     SetupButtonListeners();
     setAvatarList();
   }
@@ -428,7 +446,7 @@ public class UIManager : MonoBehaviour
 
   internal void ShowCashcollect(string collectAmount)
   {
-    CollectBtn.GetComponentInChildren<TMP_Text>().text = "Collect : " + collectAmount;
+    CollectBtn.GetComponentInChildren<TMP_Text>().text = "Collect : \n" + collectAmount;
   }
 
   internal void ShowWinPopup(bool show, string collectAmount = "0")
@@ -633,4 +651,51 @@ public class UIManager : MonoBehaviour
     GoBtn.interactable = isIntractable;
 
   }
+  internal void SetHistory(List<History> historyList)
+  {
+    // Clear old history
+    foreach (Transform child in HistorySpawnPanel)
+    {
+      Destroy(child.gameObject);
+    }
+
+    if (historyList == null || historyList.Count == 0)
+      return;
+
+    foreach (var history in historyList)
+    {
+      GameObject obj = Instantiate(HistoryPrefab, HistorySpawnPanel);
+      HistoryPrefab prefab = obj.GetComponent<HistoryPrefab>();
+
+      string date = history.timestamp.ToString("dd MMM yyyy HH:mm");
+      string bet = history.bet_amount;
+      string win = history.total_win;
+
+      // If multiplier exists inside details (example parsing)
+      string multiplier = "-";
+
+
+      if (!string.IsNullOrEmpty(history.details))
+      {
+        try
+        {
+          HistoryDetails details =
+              JsonUtility.FromJson<HistoryDetails>(history.details);
+
+          if (details?.provablyFair != null)
+          {
+            multiplier = "x" + details.provablyFair.multiplier.ToString("0.00");
+          }
+        }
+        catch (Exception e)
+        {
+          Debug.LogWarning("Failed to parse history details: " + e.Message);
+        }
+      }
+
+
+      prefab.SetData(date, bet, multiplier, win);
+    }
+  }
+
 }

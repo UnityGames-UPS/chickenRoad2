@@ -18,6 +18,7 @@ public class SocketIOManager : MonoBehaviour
   internal GameData InitialData = null;
 
   internal Root ResultData = null;
+  internal Root HistoryData = null;
   internal Player PlayerData = null;
   internal bool isResultdone = false;
   internal bool SetInit = false;
@@ -28,7 +29,7 @@ public class SocketIOManager : MonoBehaviour
   protected string TestSocketURI = "https://devrealtime.dingdinghouse.com/";
   protected string nameSpace = "playground";
   private Socket gameSocket;
-  protected string gameID = "SL-VIK";
+  protected string gameID = "OT-CR2";
   //protected string gameID = "";
   private const int maxReconnectionAttempts = 6;
   private readonly TimeSpan reconnectionDelay = TimeSpan.FromSeconds(10);
@@ -398,6 +399,13 @@ public class SocketIOManager : MonoBehaviour
           CashOut();
           break;
         }
+      case "History":
+        {
+          HistoryData = myData;
+
+          History();
+          break;
+        }
     }
   }
   private void Play(string jsonObject)
@@ -408,10 +416,15 @@ public class SocketIOManager : MonoBehaviour
     AccumulateResult(0, jsonObject, "GO");
 
   }
+  private void History()
+  {
+    uiManager.SetHistory(HistoryData.payload.history);
+  }
   private void CashOut()
   {
     StartCoroutine(slotManager.ManageCashout());
     uiManager.ShowWinPopup(true, ResultData.payload.winAmount.ToString());
+    uiManager.SetPlayerBalance(PlayerData);
   }
   private void Go()
   {
@@ -421,6 +434,7 @@ public class SocketIOManager : MonoBehaviour
       if (ResultData.payload.completedAllSteps)
       {
         slotManager.Win();
+        uiManager.SetPlayerBalance(PlayerData);
         return;
       }
     }
@@ -429,11 +443,13 @@ public class SocketIOManager : MonoBehaviour
       slotManager.JumpChicken();
       uiManager.setBEtBtnsIntractable(true);
       uiManager.ShowCashcollect(ResultData.payload.currentWinAmount.ToString());
+      uiManager.SetPlayerBalance(PlayerData);
     }
     else
     {
       slotManager.Die();
       uiManager.ShowCashcollect("0");
+      uiManager.SetPlayerBalance(PlayerData);
     }
 
   }
@@ -485,7 +501,17 @@ public class SocketIOManager : MonoBehaviour
     string json = JsonUtility.ToJson(message);
     SendDataWithNamespace("request", json);
   }
+  internal void AccumulateHistory(int pageno = 1)
+  {
 
+    MessageData message = new();
+    message.type = "HISTORY";
+    message.payload.page = pageno;
+
+    // Serialize message data to JSON
+    string json = JsonUtility.ToJson(message);
+    SendDataWithNamespace("request", json);
+  }
   private List<string> ConvertListListIntToListString(List<List<int>> listOfLists)
   {
     List<string> resultList = new List<string>();
@@ -519,6 +545,7 @@ public class MessageData
 public class Data
 {
   public int betIndex;
+  public int page;
   public string Event;
   public string difficulty;
   public List<int> index;
@@ -585,4 +612,34 @@ public class Payload
   public ProvablyFair provablyFair;
   public bool completedAllSteps;
   public bool isCrash;
+
+  public List<History> history;
+  public Meta meta;
+}
+[Serializable]
+public class History
+{
+  public string bet_amount;
+  public string total_win;
+  public DateTime timestamp;
+  public string details;
+}
+[Serializable]
+public class Meta
+{
+  public int total;
+  public int page;
+  public int limit;
+  public int pages;
+}
+[Serializable]
+public class HistoryDetails
+{
+  public ProvablyFairDetails provablyFair;
+}
+
+[Serializable]
+public class ProvablyFairDetails
+{
+  public double multiplier;
 }

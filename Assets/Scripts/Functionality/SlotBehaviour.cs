@@ -18,6 +18,7 @@ public class SlotBehaviour : MonoBehaviour
   [SerializeField] private GameObject RoadSectionPrefab;
   [SerializeField] private List<RoadSection> RoadSectionList = new List<RoadSection>();
   [SerializeField] private GameObject RoadEndSection;
+  [SerializeField] private Transform EndScreen;
   [Header("Chicken")]
   [SerializeField] private GameObject chicken;
   [SerializeField] internal Animator chickenAnimator;
@@ -37,14 +38,17 @@ public class SlotBehaviour : MonoBehaviour
   private bool firstClickDone = false;
   private bool gameEnded = false;
 
+  internal bool isSpaceButtonWorking = true;
   private Tween chickenTween;
   private Tween carTween;
   [SerializeField] private float roadMoveDistance = 250f;
   [SerializeField] private float roadMoveDuration = 0.3f;
   int currentRoad = 0;
+  private int moveStepCount = 0;
 
   private Tween roadTween;
 
+  internal bool roadMoveLimit = false;
 
 
   [Header("data ")]
@@ -189,7 +193,11 @@ public class SlotBehaviour : MonoBehaviour
     yield return new WaitForSeconds(1f);
     audioController.PlayWLAudio("cashout");
     chickenAnimator.Play("win");
-
+    if (currentRoad - 2 >= 0)
+    {
+      RoadSectionList[currentRoad - 2].setBlackmaholeOFF(false);
+      RoadSectionList[currentRoad - 2].setGoldenManholeCover(true);
+    }
     chicken.transform.DOMove(winPosChicken.position, 0.5f)
          .SetEase(Ease.OutBack);
 
@@ -238,16 +246,79 @@ public class SlotBehaviour : MonoBehaviour
   }
 
 
+  // private void MoveRoad()
+  // {
+  //   roadTween?.Kill();
+
+  //   roadTween = MovableRoad
+  //       .DOLocalMoveX(-250f, 0.3f)
+  //       .SetRelative(true)
+  //       .SetEase(Ease.OutQuad);
+  // }
+
   private void MoveRoad()
   {
     roadTween?.Kill();
+    chickenTween?.Kill();
 
-    roadTween = MovableRoad
-        .DOLocalMoveX(-250f, 0.3f)
-        .SetRelative(true)
-        .SetEase(Ease.OutQuad);
+    float roadEndX = RoadEndSection.transform.position.x;
+    float endScreenX = EndScreen.position.x;
+
+    if (!roadMoveLimit)
+    {
+
+      roadTween = MovableRoad
+          .DOLocalMoveX(-250f, 0.3f)
+          .SetRelative(true)
+          .SetEase(Ease.OutQuad);
+    }
+    else
+    {
+
+      chickenTween = chicken.transform
+          .DOLocalMoveX(250f, 0.3f)
+          .SetRelative(true)
+          .SetEase(Ease.OutQuad);
+    }
   }
+  // private void MoveRoad()
+  // {
+  //   moveStepCount++;
 
+  //   roadTween?.Kill();
+  //   chickenTween?.Kill();
+
+  //   float roadEndX = RoadEndSection.transform.position.x;
+  //   float endScreenX = EndScreen.position.x;
+
+
+  //   float offset = moveStepCount * roadMoveDistance;
+
+  //   if (roadEndX > endScreenX)
+  //   {
+  //     MovableRoad.localPosition = new Vector3(
+  //         MovableRoad.localPosition.x - roadMoveDistance,
+  //         MovableRoad.localPosition.y,
+  //         MovableRoad.localPosition.z
+  //     );
+
+  //     roadTween = MovableRoad
+  //         .DOLocalMoveX(MovableRoad.localPosition.x, roadMoveDuration)
+  //         .SetEase(Ease.OutQuad);
+  //   }
+  //   else
+  //   {
+  //     chicken.transform.localPosition = new Vector3(
+  //         chicken.transform.localPosition.x + roadMoveDistance,
+  //         chicken.transform.localPosition.y,
+  //         chicken.transform.localPosition.z
+  //     );
+
+  //     chickenTween = chicken.transform
+  //         .DOLocalMoveX(chicken.transform.localPosition.x, roadMoveDuration)
+  //         .SetEase(Ease.OutQuad);
+  //   }
+  // }
 
   #endregion
   internal IEnumerator ManageCashout()
@@ -273,5 +344,27 @@ public class SlotBehaviour : MonoBehaviour
     }
     uiManager.ShowWinPopup(false);
     uiManager.setBtnsIntractable(true);
+    moveStepCount = 0;
+    roadMoveLimit = false;
+
   }
+
+  // void Update()
+  // {
+  //   if (Input.GetKeyDown(KeyCode.Space))
+  //   {
+  //     if (isSpaceButtonWorking)
+  //     {
+  //       if (uiManager.PlayBtn.gameObject.activeInHierarchy)
+  //       {
+  //         OnClickPlay(); uiManager.PlayBtn.gameObject.SetActive(false); uiManager.setBtnsIntractable(false);
+  //       }
+  //       else
+  //       {
+  //         OnClickGO(); uiManager.setBtnsIntractable(false);
+  //       }
+  //     }
+  //   }
+  // }
+
 }
