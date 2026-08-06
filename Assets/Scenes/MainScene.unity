@@ -3940,7 +3940,7 @@ MonoBehaviour:
   NoQuit_Button: {fileID: 141852343}
   CrossQuit_Button: {fileID: 1330616845}
   audioController: {fileID: 1030743558465206379}
-  jsFunctCalls: {fileID: 0}
+  jsFunctCalls: {fileID: 1029290966}
   m_AwakeGameButton: {fileID: 0}
   HistoryPopup: {fileID: 1431915152}
   CloseHistoryButton: {fileID: 913807836}
