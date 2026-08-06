@@ -176,6 +176,8 @@ public class UIManager : MonoBehaviour
   [SerializeField]
   private AudioController audioController;
   [SerializeField]
+  private JSFunctCalls jsFunctCalls;
+  [SerializeField]
   private Button m_AwakeGameButton;
   [Header("History Popup")]
   [SerializeField] private GameObject HistoryPopup;
@@ -202,6 +204,21 @@ public class UIManager : MonoBehaviour
   internal bool isExit = false;
   internal int FreeSpins;
   internal int selectedAvatar;
+
+  private void Awake()
+  {
+    if (jsFunctCalls != null)
+      jsFunctCalls.RegisterVisibilityListener(gameObject.name);
+  }
+
+  public void OnFocusChanged(string value)
+  {
+    bool focused = value == "1";
+    Debug.Log("UNITY FOCUS CHANGED: " + value + " (focused: " + focused + ")");
+    audioController?.SetMuteAll(!focused);
+    socketManager?.HandleFocusChange(focused);
+  }
+
   private void Start()
   {
 
