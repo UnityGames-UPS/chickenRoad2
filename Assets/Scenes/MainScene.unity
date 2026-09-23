@@ -4977,7 +4977,7 @@ MonoBehaviour:
   slotManager: {fileID: 2046803210}
   uiManager: {fileID: 377874625}
   JSManager: {fileID: 1029290966}
-  testToken: 75503ead0c4c46bf9be21f4f868d9bb8
+  testToken: 4a6df0ed7b7948949cbd0b6e1114a41d
   RaycastBlocker: {fileID: 2036107390}
 --- !u!1 &505613132
 GameObject:
@@ -18619,15 +18619,15 @@ RectTransform:
   - {fileID: 226574456}
   - {fileID: 1023456359}
   - {fileID: 103253978}
-  - {fileID: 1802858815}
-  - {fileID: 14842436}
-  - {fileID: 757698368}
-  - {fileID: 1192722804}
   - {fileID: 1929552519}
   - {fileID: 2079647008}
   - {fileID: 929143280}
   - {fileID: 1431915153}
   - {fileID: 952216020}
+  - {fileID: 1802858815}
+  - {fileID: 14842436}
+  - {fileID: 757698368}
+  - {fileID: 1192722804}
   m_Father: {fileID: 1485219722}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -28207,6 +28207,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2124819575}
     m_Modifications:
+    - target: {fileID: 572928155382674284, guid: 40d90b34989cf49ae97aac29c4366fcc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.72999954
+      objectReference: {fileID: 0}
+    - target: {fileID: 572928155382674284, guid: 40d90b34989cf49ae97aac29c4366fcc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.0799999
+      objectReference: {fileID: 0}
     - target: {fileID: 2845020966184685973, guid: 40d90b34989cf49ae97aac29c4366fcc, type: 3}
       propertyPath: m_Name
       value: HistoryPrefab

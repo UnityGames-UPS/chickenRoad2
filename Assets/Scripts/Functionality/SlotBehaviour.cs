@@ -37,6 +37,8 @@ public class SlotBehaviour : MonoBehaviour
 
   private bool firstClickDone = false;
   private bool gameEnded = false;
+  private bool isJumping = false;
+  private const float JumpAnimationDuration = 0.45f;
 
   internal bool isSpaceButtonWorking = true;
   private Tween chickenTween;
@@ -126,7 +128,8 @@ public class SlotBehaviour : MonoBehaviour
 
   internal void JumpChicken()
   {
-    if (gameEnded) return;
+    if (gameEnded || isJumping) return;
+    isJumping = true;
     Debug.Log("jump chicken");
     if (!firstClickDone)
     {
@@ -142,6 +145,17 @@ public class SlotBehaviour : MonoBehaviour
         RoadSectionList[currentRoad - 2].setBlackmaholeOFF(false);
         RoadSectionList[currentRoad - 2].setGoldenManholeCover(true);
       }
+    }
+    StartCoroutine(JumpCompleteRoutine());
+  }
+
+  private IEnumerator JumpCompleteRoutine()
+  {
+    yield return new WaitForSeconds(JumpAnimationDuration);
+    isJumping = false;
+    if (!gameEnded)
+    {
+      uiManager.setBEtBtnsIntractable(true);
     }
   }
   #region  chicken animation
@@ -336,6 +350,7 @@ public class SlotBehaviour : MonoBehaviour
     currentRoad = 0;
     firstClickDone = false;
     gameEnded = false;
+    isJumping = false;
     ribbon.StopAnimation();
     ribbon.gameObject.GetComponent<Image>().sprite = ribbon.textureArray[0];
     foreach (var road in RoadSectionList)

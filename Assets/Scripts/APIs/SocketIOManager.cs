@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using Best.SocketIO;
 using Best.SocketIO.Events;
 using DG.Tweening;
@@ -518,7 +519,6 @@ public class SocketIOManager : MonoBehaviour
     if (!ResultData.payload.isCrash)
     {
       slotManager.JumpChicken();
-      uiManager.setBEtBtnsIntractable(true);
       uiManager.ShowCashcollect(ResultData.payload.currentWinAmount.ToString());
       uiManager.SetPlayerBalance(PlayerData);
     }
@@ -704,7 +704,34 @@ public class History
   public string bet_amount;
   public string total_win;
   public DateTime timestamp;
-  public string details;
+  [JsonConverter(typeof(HistoryDetailsConverter))]
+  public HistoryDetails details;
+}
+
+public class HistoryDetailsConverter : JsonConverter
+{
+  public override bool CanConvert(Type objectType) => objectType == typeof(HistoryDetails);
+
+  public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+  {
+    if (reader.TokenType == JsonToken.Null)
+      return null;
+
+    if (reader.TokenType == JsonToken.String)
+    {
+      string raw = (string)reader.Value;
+      return string.IsNullOrEmpty(raw) ? null : JsonConvert.DeserializeObject<HistoryDetails>(raw);
+    }
+
+    return JObject.Load(reader).ToObject<HistoryDetails>(serializer);
+  }
+
+  public override bool CanWrite => false;
+
+  public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+  {
+    throw new NotImplementedException();
+  }
 }
 [Serializable]
 public class Meta
@@ -717,11 +744,21 @@ public class Meta
 [Serializable]
 public class HistoryDetails
 {
+  public string difficulty;
+  public double winMultiplier;
+  public int crashedAtStep;
+  public int cashedOutAtStep;
   public ProvablyFairDetails provablyFair;
 }
 
 [Serializable]
 public class ProvablyFairDetails
 {
+  public double crashPoint;
+  public string hmac;
+  public string hex;
+  public double hInt;
   public double multiplier;
+  public string serverSeed;
+  public string clientSeed;
 }

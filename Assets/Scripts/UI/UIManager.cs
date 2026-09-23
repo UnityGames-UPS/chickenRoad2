@@ -692,22 +692,9 @@ public class UIManager : MonoBehaviour
       string multiplier = "-";
 
 
-      if (!string.IsNullOrEmpty(history.details))
+      if (history.details?.provablyFair != null)
       {
-        try
-        {
-          HistoryDetails details =
-              JsonUtility.FromJson<HistoryDetails>(history.details);
-
-          if (details?.provablyFair != null)
-          {
-            multiplier = "x" + details.provablyFair.multiplier.ToString("0.00");
-          }
-        }
-        catch (Exception e)
-        {
-          Debug.LogWarning("Failed to parse history details: " + e.Message);
-        }
+        multiplier = "x" + history.details.provablyFair.multiplier.ToString("0.00");
       }
 
 
